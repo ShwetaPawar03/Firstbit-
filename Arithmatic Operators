@@ -1,0 +1,158 @@
+//1.write  a c program to add two integers and display the result
+
+#include <stdio.h>
+
+void main()
+{
+    int a = 10, b = 20;
+    int sum = a + b;
+
+    printf("Addition = %d", sum);
+
+    return 0;
+}
+
+//write a c program to find the area of a circle
+
+
+void  main()
+{
+    float r = 5, area;
+
+    area = 3.14 * r * r;
+
+    printf("Area of Circle = %f", area);
+
+    return 0;
+}
+
+//3.write a C program to convert temperature from Celsius to fahrenheit using the formula F=(C*9/5)+32  
+
+void main()
+{
+    float C = 25, F;
+
+    F = (C * 9 / 5) + 32;
+
+    printf("Temperature in Fahrenheit = %f", F);
+
+    return 0;
+}
+
+//4. Write  a c program to swap two numbers using a temporary third variable.
+
+void main()
+{
+    int a = 10, b = 20, temp;
+
+    temp = a;
+    a = b;
+    b = temp;
+
+    printf("a = %d\n", a);
+    printf("b = %d", b);
+
+    return 0;
+}
+
+//5. write a c program to input five numbers and find their average
+
+void main()
+{
+    int a, b, c, d, e;
+    float avg;
+
+    printf("Enter five numbers: ");
+    scanf("%d %d %d %d %d", &a, &b, &c, &d, &e);
+
+    avg = (a + b + c + d + e) / 5.0;
+
+    printf("Average = %f", avg);
+
+    return 0;
+}
+
+//6. write a c program  to find the square and cube of a given number
+
+void main()
+{
+    int n = 5;
+
+    printf("Square = %d\n", n * n);
+    printf("Cube = %d", n * n * n);
+
+    return 0;
+}
+
+//7.write a program  to convert given minutes into hours and remaining minutes .
+
+void main()
+{
+    int minutes = 135;
+    int hours, remaining;
+
+    hours = minutes / 60;
+    remaining = minutes % 60;
+
+    printf("Hours = %d\n", hours);
+    printf("Remaining Minutes = %d", remaining);
+
+    return 0;
+}
+
+//8.write a C program to input the length  and width of a rectangle and finds its parameter .
+
+void main()
+{
+    int length, width, perimeter;
+
+    printf("Enter length: ");
+    scanf("%d", &length);
+
+    printf("Enter width: ");
+    scanf("%d", &width);
+
+    perimeter = 2 * (length + width);
+
+    printf("Perimeter = %d", perimeter);
+
+    return 0;
+}
+
+//9.write a C program to input a base and height of a triangle and calculate its area . 
+
+void main()
+{
+    float base, height, area;
+
+    printf("Enter base: ");
+    scanf("%f", &base);
+
+    printf("Enter height: ");
+    scanf("%f", &height);
+
+    area = 0.5 * base * height;
+
+    printf("Area of Triangle = %f", area);
+
+    return 0;
+}
+
+//10. write a c program to input marks of five subjects find the total marks and calculate the percentage .
+
+void main()
+{
+    int m1, m2, m3, m4, m5, total;
+    float percentage;
+
+    printf("Enter marks of five subjects: ");
+    scanf("%d %d %d %d %d", &m1, &m2, &m3, &m4, &m5);
+
+    total = m1 + m2 + m3 + m4 + m5;
+    percentage = (total / 500.0) * 100;
+
+    printf("Total Marks = %d\n", total);
+    printf("Percentage = %.2f%%", percentage);
+
+    return 0;
+}
