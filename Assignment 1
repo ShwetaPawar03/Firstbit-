@@ -1,0 +1,169 @@
+//1. Check Whether a Number is Even or Odd
+#include<stdio.h>
+void main()
+{
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if(n % 2 == 0)
+    {
+        printf("Even Number");
+    }
+    else
+    {
+        printf("Odd Number");
+    }
+}
+
+//2. Check Given 3-Digit Number is Palindrome or Not
+
+#include<stdio.h>
+void main()
+{
+    int n, rev = 0, rem, temp;
+
+    printf("Enter 3 digit number: ");
+    scanf("%d", &n);
+
+    temp = n;
+
+    while(n > 0)
+    {
+        rem = n % 10;
+        rev = rev * 10 + rem;
+        n = n / 10;
+    }
+
+    if(temp == rev)
+    {
+        printf("Palindrome Number");
+    }
+    else
+    {
+        printf("Not Palindrome Number");
+    }
+}
+
+//3. Check Whether a Given Year is Leap Year or Not
+
+#include<stdio.h>
+void main()
+{
+    int year;
+
+    printf("Enter year: ");
+    scanf("%d", &year);
+
+    if(year % 400 == 0)
+    {
+        printf("Leap Year");
+    }
+    else if(year % 100 == 0)
+    {
+        printf("Not Leap Year");
+    }
+    else if(year % 4 == 0)
+    {
+        printf("Leap Year");
+    }
+    else
+    {
+        printf("Not Leap Year");
+    }
+}
+
+//4. Check Whether a Given Character is Vowel or Consonant
+#include<stdio.h>
+void main()
+{
+    char ch;
+
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
+
+    if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+       ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+    {
+        printf("Vowel");
+    }
+    else
+    {
+        printf("Consonant");
+    }
+}
+
+//5. Check Whether a Person is Eligible to Vote
+#include<stdio.h>
+void main()
+{
+    int age;
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    if(age >= 18)
+    {
+        printf("Eligible for Voting");
+    }
+    else
+    {
+        printf("Not Eligible for Voting");
+    }
+}
+
+6. Check Whether a Given Character is Uppercase or Lowercase
+
+#include<stdio.h>
+void main()
+{
+    char ch;
+
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
+
+    if(ch >= 'A' && ch <= 'Z')
+    {
+        printf("Uppercase");
+    }
+    else if(ch >= 'a' && ch <= 'z')
+    {
+        printf("Lowercase");
+    }
+    else
+    {
+        printf("Not an Alphabet");
+    }
+}
+
+//7. Calculate Total Salary Based on Basic Salary
+#include<stdio.h>
+void main()
+{
+    float basic, da, ta, hra, total;
+
+    printf("Enter Basic Salary: ");
+    scanf("%f", &basic);
+
+    if(basic <= 5000)
+    {
+        da = basic * 10 / 100;
+        ta = basic * 20 / 100;
+        hra = basic * 25 / 100;
+    }
+    else
+    {
+        da = basic * 15 / 100;
+        ta = basic * 25 / 100;
+        hra = basic * 30 / 100;
+    }
+
+    total = basic + da + ta + hra;
+
+    printf("Basic Salary = %.2f\n", basic);
+    printf("DA = %.2f\n", da);
+    printf("TA = %.2f\n", ta);
+    printf("HRA = %.2f\n", hra);
+    printf("Total Salary = %.2f", total);
+}
