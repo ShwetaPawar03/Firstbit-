@@ -1,0 +1,204 @@
+
+#include <stdio.h>
+
+void main()
+{
+    int n, i, start, end, sum;
+    int rem, temp, rev, fact;
+    int digit, power, count, arm;
+    int perfectSum, strongSum;
+    int first, last;
+
+    // 1. Print numbers from 1 to 10
+    printf("\n1. Numbers from 1 to 10:\n");
+
+    for(i = 1; i <= 10; i++)
+    {
+        printf("%d ", i);
+    }
+
+
+    // 2. Print table of given number
+    printf("\n\n2. Enter number for table: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= 10; i++)
+    {
+        printf("%d ", n * i);
+    }
+
+
+    // 3. Sum of numbers in given range
+    printf("\n\n3. Enter start and end: ");
+    scanf("%d %d", &start, &end);
+
+    sum = 0;
+
+    for(i = start; i <= end; i++)
+    {
+        sum = sum + i;
+    }
+
+    printf("Sum = %d", sum);
+
+
+    // 4. Check Prime Number
+    printf("\n\n4. Enter number for Prime: ");
+    scanf("%d", &n);
+
+    count = 0;
+
+    for(i = 1; i <= n; i++)
+    {
+        if(n % i == 0)
+        {
+            count++;
+        }
+    }
+
+    if(n > 1 && count == 2)
+        printf("Prime Number");
+    else
+        printf("Not Prime Number");
+
+
+    // 5. Check Armstrong Number
+    printf("\n\n5. Enter number for Armstrong: ");
+    scanf("%d", &n);
+
+    temp = n;
+    count = 0;
+
+    while(temp > 0)
+    {
+        count++;
+        temp = temp / 10;
+    }
+
+    temp = n;
+    arm = 0;
+
+    while(temp > 0)
+    {
+        digit = temp % 10;
+
+        power = 1;
+
+        for(i = 1; i <= count; i++)
+        {
+            power = power * digit;
+        }
+
+        arm = arm + power;
+        temp = temp / 10;
+    }
+
+    if(arm == n)
+        printf("Armstrong Number");
+    else
+        printf("Not Armstrong Number");
+
+
+    // 6. Check Perfect Number
+    printf("\n\n6. Enter number for Perfect: ");
+    scanf("%d", &n);
+
+    perfectSum = 0;
+
+    for(i = 1; i < n; i++)
+    {
+        if(n % i == 0)
+        {
+            perfectSum = perfectSum + i;
+        }
+    }
+
+    if(n > 0 && perfectSum == n)
+        printf("Perfect Number");
+    else
+        printf("Not Perfect Number");
+
+
+    // 7. Find Factorial
+    printf("\n\n7. Enter number for Factorial: ");
+    scanf("%d", &n);
+
+    fact = 1;
+
+    for(i = 1; i <= n; i++)
+    {
+        fact = fact * i;
+    }
+
+    if(n < 0)
+        printf("Factorial not possible");
+    else
+        printf("Factorial = %d", fact);
+
+
+    // 8. Check Strong Number
+    printf("\n\n8. Enter number for Strong: ");
+    scanf("%d", &n);
+
+    temp = n;
+    strongSum = 0;
+
+    while(temp > 0)
+    {
+        digit = temp % 10;
+
+        fact = 1;
+
+        for(i = 1; i <= digit; i++)
+        {
+            fact = fact * i;
+        }
+
+        strongSum = strongSum + fact;
+        temp = temp / 10;
+    }
+
+    if(strongSum == n)
+        printf("Strong Number");
+    else
+        printf("Not Strong Number");
+
+
+    // 9. Check Palindrome Number
+    printf("\n\n9. Enter number for Palindrome: ");
+    scanf("%d", &n);
+
+    temp = n;
+    rev = 0;
+
+    while(temp > 0)
+    {
+        rem = temp % 10;
+        rev = rev * 10 + rem;
+        temp = temp / 10;
+    }
+
+    if(n >= 0 && rev == n)
+        printf("Palindrome Number");
+    else
+        printf("Not Palindrome Number");
+
+
+    // 10. Sum of First and Last Digit
+    printf("\n\n10. Enter number: ");
+    scanf("%d", &n);
+
+    temp = n;
+
+    last = temp % 10;
+
+    while(temp >= 10)
+    {
+        temp = temp / 10;
+    }
+
+    first = temp;
+
+    printf("Sum = %d", first + last);
+
+}
