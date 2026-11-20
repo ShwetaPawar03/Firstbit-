@@ -1,0 +1,219 @@
+
+#include <stdio.h>
+
+void main()
+{
+    int n, i, j, space, num;
+
+    // 1. Solid Square Pattern
+
+    printf("\n1. Solid Square Pattern");
+    printf("\nEnter n: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        for(j = 1; j <= n; j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+
+    // 2. Right Angled Triangle Pattern
+
+    printf("\n2. Right Angled Triangle");
+    printf("\nEnter n: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        for(j = 1; j <= i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+
+    // 3. Inverted Right Angled Triangle
+
+    printf("\n3. Inverted Right Angled Triangle");
+    printf("\nEnter n: ");
+    scanf("%d", &n);
+
+    for(i = n; i >= 1; i--)
+    {
+        for(j = 1; j <= i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+
+    // 4. Pyramid Pattern
+
+    printf("\n4. Pyramid Pattern");
+    printf("\nEnter n: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        for(space = 1; space <= n-i; space++)
+        {
+            printf(" ");
+        }
+
+        for(j = 1; j <= i; j++)
+        {
+            printf("* ");
+        }
+
+        printf("\n");
+    }
+
+
+    // 5. Inverted Pyramid Pattern
+
+    printf("\n5. Inverted Pyramid Pattern");
+    printf("\nEnter n: ");
+    scanf("%d", &n);
+
+    for(i = n; i >= 1; i--)
+    {
+        for(space = 1; space <= n-i; space++)
+        {
+            printf(" ");
+        }
+
+        for(j = 1; j <= i; j++)
+        {
+            printf("* ");
+        }
+
+        printf("\n");
+    }
+
+
+    // 6. Half Pyramid Using Numbers
+
+    printf("\n6. Half Pyramid Using Numbers");
+    printf("\nEnter n: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        for(j = 1; j <= i; j++)
+        {
+            printf("%d", j);
+        }
+        printf("\n");
+    }
+
+
+    // 7. Floyd's Triangle Pattern
+
+    printf("\n7. Floyd's Triangle");
+    printf("\nEnter n: ");
+    scanf("%d", &n);
+
+    num = 1;
+
+    for(i = 1; i <= n; i++)
+    {
+        for(j = 1; j <= i; j++)
+        {
+            printf("%d ", num);
+            num++;
+        }
+        printf("\n");
+    }
+
+
+    // 8. Diamond Star Pattern
+
+    printf("\n8. Diamond Pattern");
+    printf("\nEnter n: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        for(space = 1; space <= n-i; space++)
+        {
+            printf(" ");
+        }
+
+        for(j = 1; j <= i; j++)
+        {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+
+    for(i = n-1; i >= 1; i--)
+    {
+        for(space = 1; space <= n-i; space++)
+        {
+            printf(" ");
+        }
+
+        for(j = 1; j <= i; j++)
+        {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+
+
+    // 9. Hollow Square Pattern
+
+    printf("\n9. Hollow Square Pattern");
+    printf("\nEnter n: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        for(j = 1; j <= n; j++)
+        {
+            if(i == 1 || i == n || j == 1 || j == n)
+            {
+                printf("* ");
+            }
+            else
+            {
+                printf("  ");
+            }
+        }
+
+        printf("\n");
+    }
+
+
+    // 10. Hollow Square With Diagonal Pattern
+
+    printf("\n10. Hollow Square With Diagonal");
+    printf("\nEnter n: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        for(j = 1; j <= n; j++)
+        {
+            if(i == 1 || i == n || j == 1 || j == n || i == j || i+j == n+1)
+            {
+                printf("* ");
+            }
+            else
+            {
+                printf("  ");
+            }
+        }
+
+        printf("\n");
+    }
+
+}
